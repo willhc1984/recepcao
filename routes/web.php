@@ -20,3 +20,8 @@ Route::get('/index', function () {
 });
 
 Route::get('/municipe/index', 'MunicipeController@index');
+Route::post('/municipe/cadastro', 'MunicipeController@store');
+
+Route::get('/municipe/cadastro', function(){
+    return view('municipes.cadastro');
+});

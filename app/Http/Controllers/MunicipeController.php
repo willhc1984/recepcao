@@ -28,7 +28,7 @@ class MunicipeController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,7 +39,14 @@ class MunicipeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $municipe = new Municipe();
+        $municipe->nome = $request->nome;
+        $municipe->bairro = $request->bairro;
+        $municipe->telefone = $request->telefone;
+        $municipe->rg = $request->rg;
+        //dd($municipe);
+        $municipe->save();
+        return view('municipes.cadastro');
     }
 
     /**

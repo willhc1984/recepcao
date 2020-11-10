@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="adminlte.min.css">
+  <link rel="stylesheet" href="../adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -58,7 +58,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -74,7 +74,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -119,7 +119,7 @@
       </li>
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-          <img src="user2-160x160.jpg" class="user-image img-circle elevation-2" alt="User Image">
+          <img src="../user2-160x160.jpg" class="user-image img-circle elevation-2" alt="User Image">
           <span class="d-none d-md-inline">Alexander Pierce</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -167,7 +167,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
-      <img src="AdminLTELogo.png"
+      <img src="../AdminLTELogo.png"
            alt="AdminLTE Logo"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
@@ -209,7 +209,85 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    
+
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Quick Example</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form role="form">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile">File input</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                  <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                  <span class="input-group-text" id="">Upload</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+          </div>
+          <!-- /.card-body -->
+
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.card -->
+
+
+
+    <form method="post" action="/municipe/cadastro">
+      @csrf
+      <div class="form-group row">
+        <label for="nome" class="col-sm-1 col-form-label">Nome</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="nome" name="nome">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="bairro" class="col-sm-1 col-form-label">Bairro</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="bairro" name="bairro">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="rg" class="col-sm-1 col-form-label">R.G.</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="rg" name="rg">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="telefone" class="col-sm-1 col-form-label">Telefone</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="telefone" name="telefone">
+        </div>
+      </div>
+     
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+      </div>
+    </form>
+          
     </section>
 
    
