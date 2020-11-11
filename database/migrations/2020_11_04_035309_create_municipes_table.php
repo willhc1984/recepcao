@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateMunicipesTable extends Migration
 {
     /**
@@ -16,9 +17,9 @@ class CreateMunicipesTable extends Migration
         Schema::create('municipes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
-            $table->string('bairro');
-            $table->string('telefone');
-            $table->string('rg');
+            $table->string('bairro')->nullable();
+            $table->string('telefone')->nullable();
+            $table->string('rg')->nullable();
             $table->timestamps();
         });
     }
