@@ -210,12 +210,29 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
+      @if($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+      @endif
+
+      @if(session('mensagem'))
+        <div class="alert alert-success">
+            <p>{{session('mensagem')}}</p>
+        </div>
+      @endif
+
       <div class="card card-primary">
         <div class="card-header">
           <h3 class="card-title">Quick Example</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
+        </div>
         <form method="post" action="/municipe/cadastro" role="form">
           @csrf
           <div class="card-body">

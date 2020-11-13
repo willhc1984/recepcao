@@ -39,14 +39,21 @@ class MunicipeController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'nome' => 'required',
+        ]);
+
         $municipe = new Municipe();
         $municipe->nome = $request->nome;
         $municipe->bairro = $request->bairro;
         $municipe->telefone = $request->telefone;
         $municipe->rg = $request->rg;
         //dd($municipe);
-        $municipe->save();
-        return view('municipes.cadastro');
+        $response = $municipe->save();
+        return redirect()
+                   ->back()
+                   ->with('mensagem','Municipe cadastrado!');
     }
 
     /**
